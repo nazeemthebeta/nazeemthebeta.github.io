@@ -115,46 +115,6 @@ class block_edly_about_area_three extends block_base
                             <h3>' . $this->content->title . '</h3>
                             <p>' . $this->content->content . '</p>
                             <div class="row justify-content-center">';
-        if ($data->items > 0) {
-            for ($i = 1; $i <= $data->items; $i++) {
-                $img = 'img' . $i;
-                $features_title = 'features_title' . $i;
-
-                // Image
-                if (isset($this->config->$img)) {
-                    $img = $this->config->$img;
-                } else {
-                    $img = '';
-                }
-
-                // Title
-                if (isset($this->config->$features_title)) {
-                    $features_title = $this->config->$features_title;
-                } else {
-                    $features_title = '';
-                }
-                if ($i % 2 != 0) {
-                    $text .= '<div class="col-lg-6 col-sm-6">
-                                            ';
-                }
-                $text .= '
-                                            ';
-                if ($img):
-                    $img = $img;
-                    $text .= '                    
-                                                    <img src="' . edly_block_image_process($img) . '" alt="' . $features_title . '">';
-                endif;
-                $text .= '
-                                                <span>' . $features_title . '</span>
-                                            ';
-                if ($i % 2 == 0) {
-                    $text .= '
-                                            </div>';
-                }
-            }
-        }
-        $text .= '
-                            </div>';
 
         if (!empty($this->content->button_text) && !empty($this->content->button_link)) {
             $text .= '
