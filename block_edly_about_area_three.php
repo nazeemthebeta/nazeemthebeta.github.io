@@ -133,7 +133,7 @@ class block_edly_about_area_three extends block_base
                 } else {
                     $features_title = '';
                 }
-                if ($i % 2 != 0) {
+                if ($i % 2 < 0) {
                     $text .= '<div class="col-lg-6 col-sm-6">
                                             <ul class="list">';
                 }
