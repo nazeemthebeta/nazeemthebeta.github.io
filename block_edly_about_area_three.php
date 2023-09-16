@@ -103,22 +103,8 @@ class block_edly_about_area_three extends block_base {
                                         // Title
                                         if(isset($this->config->$features_title)) { $features_title = $this->config->$features_title; }else{ $features_title = ''; }
                                         if($i % 2 != 0){
-                                            $text .= '<div class="col-lg-6 col-sm-6">
-                                            <ul class="list">';
+                                            $text .= '';
                                         }
-                                        $text .= '
-                                            <li>';
-                                                if($img):
-                                                    $img = $img;
-                                                    $text .= '                    
-                                                    <img src="'.edly_block_image_process($img).'" alt="'.$features_title.'">';
-                                                endif;
-                                                $text .= '
-                                                <span>'.$features_title.'</span>
-                                            </li>';
-                                        if($i % 2 == 0){
-                                            $text .= '</ul>
-                                            </div>';
                                         }
                                     }
                                 }
